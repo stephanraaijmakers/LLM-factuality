@@ -26,7 +26,8 @@ from operator import itemgetter
 
 # If you use COLAB: put your Hggingface/OpenAI keys in keys.env, or upload them in COLAB through the "key" icon.
 # Otherwise put then in the code (be careful).
-dotenv.load_dotenv('/content/drive/MyDrive/CODE/keys.env')
+# Replace <keys.env> with your keys.env below:
+dotenv.load_dotenv('<keys.env>')
 
 ##os.environ["OPENAI_API_KEY"] = userdata.get('OPENAI_API_KEY')
 #chat = ChatOpenAI(
