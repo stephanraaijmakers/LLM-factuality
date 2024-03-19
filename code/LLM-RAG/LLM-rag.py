@@ -11,9 +11,9 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings.sentence_transformer import SentenceTransformerEmbeddings
-from chromadb.utils import embedding_functions
 from langchain import hub
 from langchain_core.prompts import ChatPromptTemplate
+#from chromadb.utils import embedding_functions
 from operator import itemgetter
 
 # If you use COLAB: put your Hggingface/OpenAI keys in keys.env, or upload them in COLAB through the "key" icon.
