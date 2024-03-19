@@ -1,5 +1,5 @@
 # Stephan Raaijmakers, 2024
-#!pip install -r /content/drive/MyDrive/CODE/requirements.txt
+#!pip install -r requirements.txt
 import os
 from langchain.chat_models import ChatOpenAI
 from google.colab import userdata
