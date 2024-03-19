@@ -25,22 +25,13 @@ from operator import itemgetter
 dotenv.load_dotenv('<keys.env>')
 
 ##os.environ["OPENAI_API_KEY"] = userdata.get('OPENAI_API_KEY')
-#llm = ChatOpenAI(
-#    openai_api_key=os.environ.get("OPENAI_API_KEY"),
-#    model='gpt-3.5-turbo'
-#)
-
-
-template = """Question: {question}
-Let's think step by step. Answer in Dutch.
-
-Answer: """
+#os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 # For Dutch LLMs, see https://huggingface.co/spaces/BramVanroy/open_dutch_llm_leaderboard
 
-#os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
-llm = HuggingFaceHub(repo_id="HuggingFaceH4/zephyr-7b-beta", model_kwargs={"temperature":0.1,"max_length":128})
 
+llm = HuggingFaceHub(repo_id="HuggingFaceH4/zephyr-7b-beta", model_kwargs={"temperature":0.1,"max_length":128})
+# llm = ChatOpenAI(openai_api_key=os.environ.get("OPENAI_API_KEY"),model='gpt-3.5-turbo')
 # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.1, "max_length":64})
 # llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
 # llm = HuggingFaceHub(repo_id="BramVanroy/Llama-2-13b-chat-dutch", model_kwargs={"temperature":0.1,"max_length":64})
