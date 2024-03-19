@@ -17,7 +17,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from operator import itemgetter
 
 # If you use COLAB: put your Hggingface/OpenAI keys in keys.env, or upload them in COLAB through the "key" icon.
-# Otherwise put then in the code (be careful).
+# Otherwise put them in the code (be careful).
 # Replace <keys.env> with your keys.env below:
 dotenv.load_dotenv('<keys.env>')
 
