@@ -1,22 +1,19 @@
 # Stephan Raaijmakers, 2024
 #!pip install -r requirements.txt
 import os
-from langchain.chat_models import ChatOpenAI
-from google.colab import userdata
+import bs4
+#from langchain.chat_models import ChatOpenAI
 import dotenv
-from langchain import PromptTemplate,HuggingFaceHub
+from langchain import HuggingFaceHub
 from langchain_community.document_loaders import WebBaseLoader, TextLoader
 from langchain_community.vectorstores import Chroma
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.embeddings.sentence_transformer import SentenceTransformerEmbeddings
-import bs4
 from chromadb.utils import embedding_functions
 from langchain import hub
-
 from langchain_core.prompts import ChatPromptTemplate
-
 from operator import itemgetter
 
 # If you use COLAB: put your Hggingface/OpenAI keys in keys.env, or upload them in COLAB through the "key" icon.
