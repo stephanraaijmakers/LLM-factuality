@@ -4,11 +4,6 @@ import os
 from langchain.chat_models import ChatOpenAI
 from google.colab import userdata
 import dotenv
-from langchain.schema import (
-    SystemMessage,
-    HumanMessage,
-    AIMessage
-)
 from langchain import PromptTemplate,HuggingFaceHub
 from langchain_community.document_loaders import WebBaseLoader, TextLoader
 from langchain_community.vectorstores import Chroma
