@@ -3,6 +3,7 @@
 import os
 import bs4
 import dotenv
+from operator import itemgetter
 #from langchain.chat_models import ChatOpenAI
 from langchain import HuggingFaceHub
 from langchain_community.document_loaders import WebBaseLoader, TextLoader
@@ -14,7 +15,7 @@ from langchain_community.embeddings.sentence_transformer import SentenceTransfor
 from langchain import hub
 from langchain_core.prompts import ChatPromptTemplate
 #from chromadb.utils import embedding_functions
-from operator import itemgetter
+
 
 # If you use COLAB: put your Hggingface/OpenAI keys in keys.env, or upload them in COLAB through the "key" icon.
 # Otherwise put them in the code (be careful).
