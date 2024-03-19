@@ -25,7 +25,7 @@ from operator import itemgetter
 dotenv.load_dotenv('<keys.env>')
 
 ##os.environ["OPENAI_API_KEY"] = userdata.get('OPENAI_API_KEY')
-#chat = ChatOpenAI(
+#llm = ChatOpenAI(
 #    openai_api_key=os.environ.get("OPENAI_API_KEY"),
 #    model='gpt-3.5-turbo'
 #)
