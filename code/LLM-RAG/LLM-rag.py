@@ -36,10 +36,9 @@ Let's think step by step. Answer in Dutch.
 
 Answer: """
 
-# https://huggingface.co/spaces/BramVanroy/open_dutch_llm_leaderboard
+# For Dutch LLMs, see https://huggingface.co/spaces/BramVanroy/open_dutch_llm_leaderboard
 
 #os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
-
 llm = HuggingFaceHub(repo_id="HuggingFaceH4/zephyr-7b-beta", model_kwargs={"temperature":0.1,"max_length":128})
 
 # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.1, "max_length":64})
