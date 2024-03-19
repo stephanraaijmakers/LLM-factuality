@@ -2,8 +2,8 @@
 #!pip install -r requirements.txt
 import os
 import bs4
-#from langchain.chat_models import ChatOpenAI
 import dotenv
+#from langchain.chat_models import ChatOpenAI
 from langchain import HuggingFaceHub
 from langchain_community.document_loaders import WebBaseLoader, TextLoader
 from langchain_community.vectorstores import Chroma
