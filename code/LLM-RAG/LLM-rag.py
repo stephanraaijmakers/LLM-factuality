@@ -29,7 +29,6 @@ dotenv.load_dotenv('<keys.env>')
 #    openai_api_key=os.environ.get("OPENAI_API_KEY"),
 #    model='gpt-3.5-turbo'
 #)
-#os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 
 template = """Question: {question}
@@ -39,6 +38,7 @@ Answer: """
 
 # https://huggingface.co/spaces/BramVanroy/open_dutch_llm_leaderboard
 
+#os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 llm = HuggingFaceHub(repo_id="HuggingFaceH4/zephyr-7b-beta", model_kwargs={"temperature":0.1,"max_length":128})
 
