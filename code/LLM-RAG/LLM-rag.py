@@ -85,7 +85,11 @@ embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2"
 vectorstore = Chroma.from_documents(documents=splits,embedding=embedding_function)
 
 # ========================== Retrieve and generate ==============================
+
+
 retriever = vectorstore.as_retriever()
+
+# Option 1:
 prompt = hub.pull("rlm/rag-prompt")
 
 def format_docs(docs):
@@ -104,6 +108,8 @@ print("\n================================================================\n")
 print("QUERY: <query>")
 print(rag_chain.invoke("<query>"))
 print("\n================================================================\n")
+
+# Option 2:
 
 template = """Answer the question based only on the following context:
 {context}
