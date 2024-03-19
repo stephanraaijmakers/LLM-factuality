@@ -60,7 +60,7 @@ llm = HuggingFaceHub(repo_id="HuggingFaceH4/zephyr-7b-beta", model_kwargs={"temp
 
 # ===================================================================
 
-
+# Replace <url> with your url below if you want to crawl/scrape a web source.
 loader = WebBaseLoader(
     web_paths=("<url>",),
 
